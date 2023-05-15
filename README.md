@@ -16,4 +16,4 @@ GUI that Calculates Car Monthly Payments
 (![image](https://github.com/yngerges-pro/Car-Payments-Calculator-/assets/102266055/a433ac7b-ae5b-4a9b-9ec0-100fedd39a57)
 
 # Transfers data to MySQL
-(![image](https://github.com/yngerges-pro/Car-Payments-Calculator-/assets/102266055/a433ac7b-ae5b-4a9b-9ec0-100fedd39a57)
+![image](https://github.com/yngerges-pro/Car-Payments-Calculator-/assets/85207784/e401f380-defd-441e-a573-55f509016f4d)
