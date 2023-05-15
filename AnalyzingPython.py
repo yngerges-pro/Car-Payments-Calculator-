@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 from pathlib import Path
 import PySimpleGUI as sg
+import tkinter as tk
 
 
 current_dir = Path(__file__).parent if '__file__' in locals() else Path.cwd()
@@ -74,43 +75,52 @@ def DataAnalysisfun():
 
     max_val_score = np.max(totalforScores)
     min_val_score = np.min(totalforScores)
-    print(min_val_score,max_val_score)
 
     max_val_Term = np.max(totalforTerm)
     min_val_Term = np.min(totalforTerm)
     return min_val_downPayment, max_val_downPayment, min_val_score, max_val_score, min_val_Term,max_val_Term, slope, slopeforScore, slopeforterm 
 
+
+
 def function():
-    layout3 = [
-            [sg.Text('The minimum total payment for down payment: $'), sg.Text(size=(15,1), key='minDown')],
-            [sg.Text('The maximum total payment for down payment: $'), sg.Text(size=(15,1), key='maxDown')],
-            [sg.Text('The minimum total payment for credit score: $'), sg.Text(size=(15,1), key='minScore')],
-            [sg.Text('The maximum total payment for credit score: $'), sg.Text(size=(15,1), key='maxScore')],
-            [sg.Text('The minimum total payment for loan term: $'), sg.Text(size=(15,1), key='minTerm')],
-            [sg.Text('The maximum total payment for loan term: $'), sg.Text(size=(15,1), key='maxTerm')],
-            [sg.Text('The slope of total payment for down payment: '), sg.Text(size=(15,1), key='slope')],
-            [sg.Text('The slope of total payment for credit score: '), sg.Text(size=(15,1), key='slopeforScore')],
-            [sg.Text('The slope of total payment for loan term: '), sg.Text(size=(15,1), key='slopeforterm')],
-            [sg.Exit()]
-        ]
-    return sg.Window('Data Analysis', layout3, finalize=True)
+    min_val_downPayment, max_val_downPayment, min_val_score, max_val_score, min_val_Term, max_val_Term, slope, slopeforScore, slopeforterm = DataAnalysisfun()
 
-def FinalFun():
-    min_val_downPayment, max_val_downPayment, min_val_score, max_val_score, min_val_Term,max_val_Term, slope, slopeforScore, slopeforterm = DataAnalysisfun()    
-    while True:
-        DataAnalysis = function()
-        DataAnalysis['minDown'].update(value=f'{min_val_downPayment:.2f}')
-        DataAnalysis['maxDown'].update(value=f'{max_val_downPayment:.2f}')
-        DataAnalysis['minScore'].update(value=f'{min_val_score:.2f}')
-        DataAnalysis['maxScore'].update(value=f'{max_val_score:.2f}')
-        DataAnalysis['minTerm'].update(value=f'{min_val_Term:.2f}')
-        DataAnalysis['maxTerm'].update(value=f'{max_val_Term:.2f}')
-        DataAnalysis['slope'].update(value=f'{slope:.2f}')
-        DataAnalysis['slopeforScore'].update(value=f'{slopeforScore:.2f}')
-        DataAnalysis['slopeforterm'].update(value=f'{slopeforterm:.2f}')
-        event, values = DataAnalysis.read()
-        if event in (sg.WIN_CLOSED, 'Exit'):
-            DataAnalysis.close()
-            break
-    
+    win1 = tk.Tk()
+    win1.title('Data Analysis')
+    win1.geometry("560x320")
+    win1.config(bg="#FFEEF2")
 
+    min_down_label = tk.Label(win1, text='The minimum total payment for down payment: $' + f'{min_val_downPayment:.2f}', bg= "#FFEEF2" ,fg = "#98847F", font = ('Lato', 12))
+    min_down_label.pack(anchor="w")
+
+    max_down_label = tk.Label(win1, text='The maximum total payment for down payment: $' + f'{max_val_downPayment:.2f}', bg= "#FFEEF2" ,fg = "#98847F", font = ('Lato', 12))
+    max_down_label.pack(anchor="w")
+
+    min_score_label = tk.Label(win1, text='The minimum total payment for credit score: $' + f'{min_val_score:.2f}', bg= "#FFEEF2" ,fg = "#98847F", font = ('Lato', 12))
+    min_score_label.pack(anchor="w")
+
+    max_score_label = tk.Label(win1, text='The maximum total payment for credit score: $' + f'{max_val_score:.2f}', bg= "#FFEEF2" ,fg = "#98847F", font = ('Lato', 12))
+    max_score_label.pack(anchor="w")
+
+    min_term_label = tk.Label(win1, text='The minimum total payment for loan term: $' + f'{min_val_Term:.2f}', bg= "#FFEEF2" ,fg = "#98847F", font = ('Lato', 12))
+    min_term_label.pack(anchor="w")
+
+    max_term_label = tk.Label(win1, text='The maximum total payment for loan term: $' + f'{max_val_Term:.2f}', bg= "#FFEEF2" ,fg = "#98847F", font = ('Lato', 12))
+    max_term_label.pack(anchor="w")
+
+    slope_down_label = tk.Label(win1, text='The slope of total payment for down payment: ' + f'{slope:.2f}', bg= "#FFEEF2" ,fg = "#98847F", font = ('Lato', 12))
+    slope_down_label.pack(anchor="w")
+
+    slope_score_label = tk.Label(win1, text='The slope of total payment for credit score: '  + f'{slopeforScore:.2f}', bg= "#FFEEF2" ,fg = "#98847F", font = ('Lato', 12))
+    slope_score_label.pack(anchor="w")
+
+
+    slope_term_label = tk.Label(win1, text='The slope of total payment for loan term: ' + f'{slopeforterm:.2f}', bg= "#FFEEF2" ,fg = "#98847F", font = ('Lato', 12))
+    slope_term_label.pack(anchor="w")
+
+    exit_button = tk.Button(win1, text='Exit', command=win1.destroy, background="#FFC1D8")
+    exit_button.pack()
+
+    win1.mainloop()
+
+    return win1
