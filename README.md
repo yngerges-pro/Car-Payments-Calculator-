@@ -3,7 +3,7 @@
 
 # Car-Payments-Calculator-
 GUI that Calculates Car Monthly Payments 
-![](http://g.recordit.co/N9l2CloxhO.gif)
+![](http://g.recordit.co/pGXay106tY.gif)
 
 # Run the SQL2520CODE(1).py to see how it works
 ## Make sure that the AnalyzingPython.py is in the same directory as the SQL2520CODE(1).py so that it works
