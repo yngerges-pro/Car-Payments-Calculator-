@@ -1,7 +1,6 @@
 # Car-Payments-Calculator-
 GUI that Calculates Car Monthly Payments 
-![](http://g.recordit.co/1fo4VVON7Q.gif)
+![](http://g.recordit.co/N9l2CloxhO.gif)
 
 # Transfers data to Excel Sheet
-![image](https://user-images.githubusercontent.com/102266055/235408562-b0cd6971-9ef6-471d-8e9f-5fada4ed70f4.png)
-
+![image](![image](https://github.com/yngerges-pro/Car-Payments-Calculator-/assets/102266055/9e96a4b8-b342-42d1-9c56-b16f450824d1))
