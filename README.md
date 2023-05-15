@@ -1,8 +1,7 @@
 # Developers
 ## Haliee Wheat, Katlyn Mijares, Kate Kuan, Youstina Gerges
 
-# Car-Payments-Calculator-
-GUI that Calculates Car Monthly Payments 
+# Car-Payments-Calculator- 
 ![](http://g.recordit.co/USBzwl0BBc.gif) 
 
 # Run the SQL2520CODE(1).py to see how it works
