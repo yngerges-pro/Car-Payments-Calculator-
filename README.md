@@ -2,7 +2,8 @@
 ## Haliee Wheat, Katlyn Mijares, Kate Kuan, Youstina Gerges
 
 # Car-Payments-Calculator- 
-![](http://g.recordit.co/USBzwl0BBc.gif) 
+GUI that Calculates automobile payments (GIF)
+![(http://g.recordit.co/USBzwl0BBc.gif)] 
 
 # Run the SQL2520CODE(1).py to see how it works
 ## Make sure that the AnalyzingPython.py is in the same directory as the SQL2520CODE(1).py so that it works
