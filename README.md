@@ -17,6 +17,3 @@ GUI that Calculates automobile payments (GIF)
 
 # Transfers data to MySQL
 ![image](https://github.com/yngerges-pro/Car-Payments-Calculator-/assets/85207784/e401f380-defd-441e-a573-55f509016f4d)
-
-# form2.png
-![image](https://github.com/yngerges-pro/Car-Payments-Calculator-/assets/85207784/f34c2d4d-4c2f-45e0-b5c3-f991effae196)
