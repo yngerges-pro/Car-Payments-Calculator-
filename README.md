@@ -4,7 +4,7 @@
 # Car-Payments-Calculator- 
 ### GUI that Calculates automobile payments (GIF)
 ### http://g.recordit.co/USBzwl0BBc.gif
-![](http://g.recordit.co/USBzwl0BBc.gif) 
+![GIF](http://g.recordit.co/USBzwl0BBc.gif) 
 # Run the SQL2520CODE(1).py to see how it works
 ## Make sure that the AnalyzingPython.py is in the same directory as the SQL2520CODE(1).py so that it works
 ## Make sure that the car.xlsx and form2.png are also in the same directory as the SQL2520CODE(1).py so that it works
